@@ -1,0 +1,65 @@
+CREATE TABLE client(
+id_client NUMBER(11) CONSTRAINT id_client_pk PRIMARY KEY,
+name VARCHAR(20) CONSTRAINT na_nn NOT NULL,
+email VARCHAR2(45),
+phone_num NUMBER(20),
+passport_num NUMBER(20),
+date_of_birth DATE,
+country VARCHAR2(45) CONSTRAINT cu_nn NOT NULL,
+nationality VARCHAR2(45) CONSTRAINT nat_nn NOT NULL,
+sex VARCHAR2(45)
+);
+
+
+CREATE TABLE transportations(
+id_transport NUMBER(11) CONSTRAINT id_transport_pk PRIMARY KEY,
+transport_type VARCHAR(50) CONSTRAINT tr_nn NOT NULL,
+driver_s_name VARCHAR2(50),
+num_passengers NUMBER(20)
+);
+
+CREATE TABLE guide(
+id_guide NUMBER(11) CONSTRAINT id_guide_pk PRIMARY KEY,
+client_id NUMBER (11) CONSTRAINT fk_guide_id REFERENCES client(id_client),
+name VARCHAR(20) CONSTRAINT nm_nn NOT NULL,
+phone_num NUMBER(20),
+address VARCHAR2(45)
+);
+
+
+CREATE TABLE services(
+id_service NUMBER(11) CONSTRAINT id_services_pk PRIMARY KEY,
+services_type VARCHAR(50) CONSTRAINT se_nn NOT NULL
+);
+
+CREATE TABLE living(
+client_id NUMBER (11) CONSTRAINT fk_living_id REFERENCES client(id_client),
+accommodation_type VARCHAR(50) CONSTRAINT ac_nn NOT NULL
+);
+
+CREATE TABLE directs(
+client_id NUMBER (11) CONSTRAINT fk0_directs_id REFERENCES client(id_client),
+guide_id NUMBER (11) CONSTRAINT fk_directs_id REFERENCES guide(id_guide),
+date_day DATE CONSTRAINT d_nn NOT NULL
+);
+
+CREATE TABLE visiting(
+client_id NUMBER (11) CONSTRAINT fk0_visiting_id REFERENCES client(id_client),
+service_id NUMBER (11) CONSTRAINT fk_visiting_id REFERENCES services(id_service),
+timer NUMBER (11) CONSTRAINT t_nn NOT NULL
+);
+
+CREATE TABLE move(
+client_id NUMBER (11) CONSTRAINT fk0_move_id REFERENCES client(id_client),
+transport_id NUMBER (11) CONSTRAINT fk_move_id REFERENCES transportations(id_transport),
+timer NUMBER (11) CONSTRAINT ti_nn NOT NULL,
+date_day DATE CONSTRAINT da_nn NOT NULL
+);
+
+
+==================================================
+CREATE TABLE usern(
+user_name VARCHAR2(20) CONSTRAINT no_null_user NOT NULL,
+pass NUMBER (11) CONSTRAINT no_null_pass NOT NULL );
+
+insert into usern VALUES('APR',123);
