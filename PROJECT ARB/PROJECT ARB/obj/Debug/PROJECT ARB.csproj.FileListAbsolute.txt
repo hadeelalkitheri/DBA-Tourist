@@ -90,3 +90,6 @@ C:\Users\USER\Desktop\المشروع\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT_A
 C:\Users\USER\Desktop\المشروع\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT_ARB.Form9.resources
 C:\Users\USER\Desktop\المشروع\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT_ARB.Properties.Resources.resources
 C:\Users\USER\Desktop\المشروع\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT ARB.csproj.GenerateResource.Cache
+D:\all project\مشروع لدارة قاعدة بيانات الي قطب قلبنا عليه بن وهلان\PROJECT ARB\PROJECT ARB\bin\Debug\PROJECT ARB.exe.config
+D:\all project\مشروع لدارة قاعدة بيانات الي قطب قلبنا عليه بن وهلان\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT ARB.exe
+D:\all project\مشروع لدارة قاعدة بيانات الي قطب قلبنا عليه بن وهلان\PROJECT ARB\PROJECT ARB\obj\Debug\PROJECT ARB.pdb

@@ -111,6 +111,11 @@ namespace PROJECT_ARB
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
     }
